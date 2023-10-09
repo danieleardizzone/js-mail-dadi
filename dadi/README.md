@@ -2,9 +2,7 @@
 ## Generare un numero random da 1 a 6, sia per il giocatore sia per il computer.
 ## Stabilire il vincitore, in base a chi fa il punteggio più alto.
 
-- Crea un array con numeri da 1 a 6
-
-- Estrai due volte un numero dall'array
+- Estrai due volte un numero da 1 a 6
 
     - Definisci le variabili delle due estrazioni:
         - lancioUtente

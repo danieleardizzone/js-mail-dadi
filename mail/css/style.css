@@ -1,0 +1,16 @@
+body{
+    background-color: #1E1E1E;
+}
+
+.container{
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+#message{
+    text-align: center;
+
+    font-family: 'Dela Gothic One', cursive;
+    color: white;
+    font-size: 42px;
+}
