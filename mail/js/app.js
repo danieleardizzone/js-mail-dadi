@@ -8,26 +8,28 @@ let arrayEmails = ['ciao11@gg.com', 'ciao22@gg.com', 'ciao33@gg.com', 'ciao44@gg
 let currentEmail;
 
 // stampo le mail in console
-// for (i = 0; i < arrayEmails.length; i++){
-//     currentEmail = arrayEmails[i];
-// 	console.log(i, currentEmail);
-// }
+console.log('Lista segreta di email per accedere');
+
+for (i = 0; i < arrayEmails.length; i++){
+    currentEmail = arrayEmails[i];
+ 	console.log(i, currentEmail);
+}
 
 // - Chiedi la mail all'utente
 
 let userEmail = prompt('Scrivi la tua email per accedere');
-console.log(userEmail);
+// console.log(userEmail);
 
 // - Verifica che la mail sia presente nel mio array
 
 for (i = 0; i < arrayEmails.length; i++){
 
     currentEmail = arrayEmails[i];
-	console.log(i, currentEmail);
+	// console.log(i, currentEmail);
 
     if (userEmail === currentEmail) {
-        userEmail = 'true';
-        console.log(userEmail);
+        userEmail = 'presente';
+        // console.log(userEmail);
     }
 }
 
@@ -39,11 +41,11 @@ for (i = 0; i < arrayEmails.length; i++){
 
 const messageDOMElement = document.getElementById('message');
 
-if(userEmail === 'true'){
-    console.log('mail presente');
+if(userEmail === 'presente'){
+    // console.log('mail presente');
     messageDOMElement.innerHTML = 'Email presente, benvenuto';
 } else {
-    console.log('mail non presente');
+    // console.log('mail non presente');
     messageDOMElement.innerHTML = 'Email non presente, riprova';
 }
 

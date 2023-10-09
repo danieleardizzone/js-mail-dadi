@@ -7,11 +7,19 @@
 //         - lancioUtente
 //         - lancioPc
 
-const userRoll = Math.floor(Math.random() * (6 - 1) + 1);
-console.log(userRoll);
+const userRoll = Math.floor(Math.random() * (6 - 1 + 1) + 1);
+// console.log(userRoll);
 
-const pcRoll = Math.floor(Math.random() * (6 - 1) + 1);
-console.log(pcRoll);
+const userRollDOMElement = document.getElementById('user-roll');
+userRollDOMElement.innerHTML = "Lancio dell'utente: " + userRoll;
+
+const pcRoll = Math.floor(Math.random() * (6 - 1 + 1) + 1);
+// console.log(pcRoll);
+
+const pcRollDOMElement = document.getElementById('pc-roll');
+pcRollDOMElement.innerHTML = "Lancio del pc: " + pcRoll;
+
+
 
 // - Stabilisci un vincitore
 
@@ -21,4 +29,12 @@ console.log(pcRoll);
 
 // - Stampa il risultato
 
-const messageDOMElement = document.getElementById('message');
+const innerMessageDOMElement = document.getElementById('inner-message');
+
+if (userRoll > pcRoll) {
+    innerMessageDOMElement.innerHTML = "Vince l'utente";
+} else if (userRoll < pcRoll) {
+    innerMessageDOMElement.innerHTML = "Vince il pc";
+} else {
+    innerMessageDOMElement.innerHTML = "Parità";
+}
